@@ -39,7 +39,6 @@ function cacheAdMidRoll(adKeyId, source) {
       : console.log("Jiogames: cacheAdMidRoll() no source to cacheAd ", source);
     return;
   }
-  //   window.onAdPrepared(adKeyId);
   if (window.DroidHandler) {
     window.DroidHandler.cacheAd(adKeyId, source);
   }
@@ -55,7 +54,6 @@ function showAdMidRoll(adKeyId, source) {
       : console.log("Jiogames: showAdMidRoll() no source to showAd ", source);
     return;
   }
-  //   window.onAdClosed(adKeyId, false, false);
   if (window.DroidHandler) {
     window.DroidHandler.showAd(adKeyId, source);
   }
@@ -77,7 +75,6 @@ function cacheAdRewardedVideo(adKeyId, source) {
         );
     return;
   }
-  //   window.onAdPrepared(adKeyId);
   if (window.DroidHandler) {
     window.DroidHandler.cacheAdRewarded(adKeyId, source);
   }
@@ -99,7 +96,6 @@ function showAdRewardedVideo(adKeyId, source) {
         );
     return;
   }
-  //   window.onAdClosed(adKeyId, true, true);
   if (window.DroidHandler) {
     window.DroidHandler.showAdRewarded(adKeyId, source);
   }
@@ -342,10 +338,8 @@ window.onUserPropertiesResponse = function (message) {
   element.style.position = "absolute";
   element.style.width = "fit-content";
   element.style.height = "fit-content";
-  // center horizontally at bottom
-  element.style.left = "50%";
+  element.style.left = "center";
   element.style.bottom = "0%";
-  element.style.transform = "translateX(-50%)";
   element.style.backgroundPosition = "center center";
   element.style.backgroundRepeat = "no-repeat";
 
@@ -358,18 +352,6 @@ window.onUserPropertiesResponse = function (message) {
   script.onload = () => {
     callback_Banner();
     banner_Configuration(obj);
-    // ensure JioAds is initialized before injecting the <ins> tag
-    try {
-      showBanner();
-    } catch (e) {
-      console.warn("JioGames: showBanner call failed on load:", e);
-      // fallback try after a short delay
-      setTimeout(() => {
-        try {
-          showBanner();
-        } catch (e) {}
-      }, 500);
-    }
   };
 
   script.onerror = () => {
