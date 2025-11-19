@@ -342,6 +342,7 @@ window.onUserPropertiesResponse = function (message) {
   element.style.bottom = "0%";
   element.style.backgroundPosition = "center center";
   element.style.backgroundRepeat = "no-repeat";
+  element.style.zIndex = "9999";
 
   document.body.appendChild(element);
 
