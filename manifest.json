@@ -1,0 +1,64 @@
+{
+  "version": "2.0.0",
+  "version_code": 2,
+  "name": "Space Battle",
+  "short_name": "SpaceBattle",
+  "package_name": "com.kaifoundry.spacebattleSP",
+  "description": "Classic Space Battle game for smartphones",
+  "start_url": "/index.html",
+  "launch_path": "/index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "icons": [
+    {
+      "src": "/images/logo/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/logo/logo_small.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo/logo_large.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo/logo_large.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo/player_ship_icon_480x660.png",
+      "sizes": "480x660",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo/player_ship_icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "developer": {
+    "name": "KaiFoundry",
+    "url": "https://www.kaifoundry.com"
+  },
+  "default_locale": "en",
+  "fullscreen": true,
+  "permissions": {
+    "audio": {
+      "description": "Required for game audio playback"
+    },
+    "storage": {
+      "description": "Required to store game progress and high scores"
+    }
+  },
+  "categories": [
+    "games",
+    "entertainment"
+  ]
+}
